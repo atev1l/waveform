@@ -11,7 +11,13 @@ export const checkFile = (hash) => {
             })
         })
           .then(response => response.json())
-          .then(json => dispatch(getFile({json})))
+          .then(json => {
+              if (json.error){
+                  alert(json.error)
+              }
+              dispatch(getFile({json}))
+          })
+          .catch(e => console.log(e))
     }
 }
 
@@ -22,7 +28,8 @@ export const uploadFile = (file) => {
             body: file
         })
           .then(response => response.json())
-          .then(json => dispatch(setMessage(json.file_id)))
+          .then(json => {dispatch(setMessage(json.file_id))})
+          .catch(e => console.log(e))
     }
 }
 
