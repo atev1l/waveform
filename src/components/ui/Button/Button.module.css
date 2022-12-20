@@ -1,0 +1,43 @@
+/* MAIN STYLES */
+.component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-width: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  text-transform: inherit;
+  background: #8C71FE;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  height: 34px;
+}
+
+.component:hover {
+  transition: 0.5s;
+  opacity: 0.6;
+}
+
+.sectionContent {
+  font-size: inherit;
+  text-align: left;
+}
+
+@media screen and (max-width: 1280px){
+  .component{
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 380px){
+  .component{
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
